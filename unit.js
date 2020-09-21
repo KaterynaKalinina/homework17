@@ -8,7 +8,7 @@ class Unit {
 
     renderUnit() {
         this.containerDiv = document.createElement('div');
-        this.containerDiv.classList ='unit';
+        this.containerDiv.classList.add('unit');
         document.body.appendChild(this.containerDiv);
 
         this.healthDiv = document.createElement('div');
