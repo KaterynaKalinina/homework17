@@ -3,13 +3,12 @@ class Unit {
        this.type = type;
        this.health = this.maxHealth = health;
        this.distance = this.maxDistance = distance;
-       this.renderUnit();
+    //    this.renderUnit();
     }
 
     renderUnit() {
         this.containerDiv = document.createElement('div');
         this.containerDiv.classList.add('unit');
-        document.body.appendChild(this.containerDiv);
 
         this.healthDiv = document.createElement('div');
         this.healthDiv.style.backgroundColor = 'red';
@@ -40,6 +39,8 @@ class Unit {
         this.img.style.height = '50%';
         this.img.style.marginLeft = '20%';
         this.containerDiv.appendChild(this.img);
+
+        return this.containerDiv;
     }
 
     isReadyToMove() {

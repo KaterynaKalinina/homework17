@@ -2,10 +2,18 @@ class Squad {
     constructor(defaultResources) {
         this._squad = [];
         this.addResources(defaultResources);
+        this.renderSquad();
 
     }
 
-    addResources (defaultResources) {
+    renderSquad() {
+        const squadContainer = document.querySelector('#squadContainer');
+        this._squad.forEach((unit) => {
+            squadContainer.append(unit.renderUnit());
+        });
+    }
+
+    addResources(defaultResources) {
         this._squad = [...this._squad, ...defaultResources];
     }
 
