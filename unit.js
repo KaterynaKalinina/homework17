@@ -3,7 +3,7 @@ class Unit {
        this.type = type;
        this.health = this.maxHealth = health;
        this.distance = this.maxDistance = distance;
-    //    this.renderUnit();
+    
     }
 
     renderUnit() {
